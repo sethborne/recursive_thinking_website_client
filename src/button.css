@@ -1,0 +1,62 @@
+/* ============================================ */
+/*                  Buttons                     */
+/* ============================================ */
+
+:root {
+  --btn-brdr-thickness: 0.1rem;
+}
+
+/* ============================================ */
+/*                   Button                     */
+/* ============================================ */
+
+.btn {
+  cursor: pointer;
+}
+
+.btn,
+.btn:hover {
+  border-radius: 1rem;
+}
+
+.btn.btn-fill-green-00b371,
+.btn.btn-otln-green-00b371:hover,
+.btn.btn-fill-green-00b371.btnSelected:hover {
+  border: var(--btn-brdr-thickness) solid var(--green-00b371);
+  background-color: var(--green-00b371);
+  color: var(--white-ff);
+}
+
+.btn.btn-otln-green-00b371,
+.btn.btn-fill-green-00b371:hover {
+  border: var(--btn-brdr-thickness) solid var(--green-00b371);
+  background-color: var(--white-ff);
+  color: var(--green-00b371);
+}
+
+.btn.btn-fill-green-00b371:hover {
+  background-color: transparent;
+}
+
+.btn.btn-fill-green-006842,
+.btn.btn-otln-green-006842:hover,
+.btn.btn-fill-green-006842.btnSelected:hover {
+  border: var(--btn-brdr-thickness) solid var(--green-006842);
+  background-color: var(--green-006842);
+  color: var(--white-ff);
+}
+
+.btn.btn-otln-green-006842,
+.btn.btn-fill-green-006842:hover {
+  border: var(--btn-brdr-thickness) solid var(--green-006842);
+  background-color: var(--white-ff);
+  color: var(--green-006842);
+}
+
+.btn.btn-fill-green-2d3134,
+.btn.btn-otln-green-2d3134:hover,
+.btn.btn-fill-green-2d3134.btnSelected:hover {
+  border: var(--btn-brdr-thickness) solid var(--green-2d3134);
+  background-color: var(--green-2d3134);
+  color: var(--white-ff);
+}

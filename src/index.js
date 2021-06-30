@@ -5,6 +5,8 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import reduxThunk from 'redux-thunk';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
+import './flexbox_grid.css';
+import './button.css';
 import App from './comp_cont/App';
 import reducers from './reducers';
 

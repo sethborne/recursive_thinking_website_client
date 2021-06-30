@@ -1,13 +1,750 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ============================================ */
+/*                  Variables                   */
+/* ============================================ */
+:root {
+  --gutter: 1rem;
+  --green-00b371: #00b371;
+  --green-006842: #006842;
+  --green-2d3134: #2d3134;
+  --white-ff: #ffffff;
+  --grey-4f: #4f4f4f;
+  --grey-f6: #f6f6f6;
+  --grey-55: #555555;
+  --grey-64: #646464;
+  --grey-66: #666666;
+  --grey-06: #060606;
+  --black-00: #000000;
+  --grey-2d3134: #2d3134;
+  --grey-424041: #424041;
+  --grey-ee: #eeeeee;
+  --grey-dd: #dddddd;
+  --grey-cc: #cccccc;
+  --grey-c6: #c6c6c6;
+  --grey-b9: #b9b9b9;
+  --grey-81: #818181;
+  --grey-97: #979797;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Base Font Size for all rem values */
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  color: var(--black-00);
 }
+
+body {
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+/* make everything border-box */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+}
+
+/* ============================================ */
+/*                   Avatars                    */
+/* ============================================ */
+
+:root {
+  --XXXS: 4rem;
+  --XXS1: 5.5rem;
+  --XXS: 7rem;
+  --XS: 10.7rem;
+  --S: 17.6rem;
+  --M: 21.3rem;
+  --L: 29.3rem;
+  --XL: 31rem;
+  --XXL: 42.3rem;
+}
+
+.avatar-XXXS {
+  width: var(--XXXS);
+  height: var(--XXXS);
+  border-radius: 50%;
+}
+
+.avatar-XXS1 {
+  width: var(--XXS1);
+  height: var(--XXS1);
+  border-radius: 50%;
+}
+
+.avatar-XXS {
+  width: var(--XXS);
+  height: var(--XXS);
+  border-radius: 50%;
+}
+
+.avatar-XS {
+  width: var(--XS);
+  height: var(--XS);
+  border-radius: 50%;
+}
+
+.avatar-S {
+  width: var(--S);
+  height: var(--S);
+  border-radius: 50%;
+}
+
+.avatar-M {
+  width: var(--M);
+  height: var(--M);
+  border-radius: 50%;
+}
+
+.avatar-L {
+  width: var(--L);
+  height: var(--L);
+  border-radius: 50%;
+}
+
+.avatar-XL {
+  width: var(--XL);
+  height: var(--XL);
+  border-radius: 50%;
+}
+
+.avatar-XXL {
+  width: var(--XXL);
+  height: var(--XXL);
+  border-radius: 50%;
+}
+
+.avatar-BS {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================ */
+/*                  Heights                     */
+/* ============================================ */
+
+.height-100P {
+  height: 100%;
+}
+.height-75P {
+  height: 75%;
+}
+.height-50P {
+  height: 50%;
+}
+.height-25P {
+  height: 25%;
+}
+
+/* ============================================ */
+/*                  Widths                      */
+/* ============================================ */
+
+.width-100P {
+  width: 100%;
+}
+.width-95P {
+  width: 95%;
+}
+.width-90P {
+  width: 90%;
+}
+.width-85P {
+  width: 85%;
+}
+.width-80P {
+  width: 80%;
+}
+.width-75P {
+  width: 75%;
+}
+.width-70P {
+  width: 70%;
+}
+.width-65P {
+  width: 65%;
+}
+.width-60P {
+  width: 60%;
+}
+.width-55P {
+  width: 55%;
+}
+.width-50P {
+  width: 50%;
+}
+.width-45P {
+  width: 45%;
+}
+.width-40P {
+  width: 40%;
+}
+.width-35P {
+  width: 35%;
+}
+.width-30P {
+  width: 30%;
+}
+.width-25P {
+  width: 25%;
+}
+.width-20P {
+  width: 20%;
+}
+.width-15P {
+  width: 15%;
+}
+.width-10P {
+  width: 10%;
+}
+.width-5P {
+  width: 5%;
+}
+
+/* ============================================ */
+/*                  Font Colors                 */
+/* ============================================ */
+
+.fc-White {
+  color: var(--white-ff);
+}
+.fc-Black {
+  color: var(--black-00);
+}
+.fc-GreenRT {
+  color: var(--green-00b371);
+}
+.fc-Grey4f {
+  color: var(--grey-4f);
+}
+.fc-Greyb9 {
+  color: var(--grey-b9);
+}
+.fc-Greyc6 {
+  color: var(--grey-c6);
+}
+.fc-Grey81 {
+  color: var(--grey-81);
+}
+.fc-Grey424041 {
+  color: var(--grey-424041);
+}
+.fc-Grey55 {
+  color: var(--grey-55);
+}
+.fc-Grey64 {
+  color: var(--grey-64);
+}
+.fc-Grey66 {
+  color: var(--grey-66);
+}
+.fc-Grey06 {
+  color: var(--grey-06);
+}
+.fc-Orangeff9a23 {
+  color: var(--orange-ff9a23);
+}
+.fc-Alert {
+  color: var(--orange-ff9a23);
+}
+.fc-Warn {
+  color: var(--warn);
+}
+.fc-Error {
+  color: var(--error);
+}
+.op-50 {
+  opacity: 0.5;
+}
+.op-25 {
+  opacity: 0.25;
+}
+
+/* ============================================ */
+/*                  Font Alignment                 */
+/* ============================================ */
+
+.ta-cent {
+  text-align: center;
+}
+.ta-just {
+  text-align: justify;
+}
+.ta-right {
+  text-align: right;
+}
+.ta-left {
+  text-align: left;
+}
+
+/* ============================================ */
+/*                  Font Transforms             */
+/* ============================================ */
+
+.tt-up {
+  text-transform: uppercase;
+}
+.tt-low {
+  text-transform: lowercase;
+}
+
+/* ============================================ */
+/*             Headers / Font Size              */
+/* ============================================ */
+
+.fs-80 {
+  font-size: 8rem;
+}
+.fs-72 {
+  font-size: 7.2rem;
+}
+.fs-66 {
+  font-size: 6.6rem;
+}
+.fs-60 {
+  font-size: 6rem;
+}
+.fs-575 {
+  font-size: 5.75rem;
+}
+.fs-50 {
+  font-size: 5rem;
+}
+.fs-48 {
+  font-size: 4.8rem;
+}
+.fs-45 {
+  font-size: 4.5rem;
+}
+.fs-40 {
+  font-size: 4rem;
+}
+.fs-36 {
+  font-size: 3.6rem;
+}
+.fs-33 {
+  font-size: 3.3rem;
+}
+.fs-30 {
+  font-size: 3rem;
+}
+.fs-28 {
+  font-size: 2.8rem;
+}
+.fs-26 {
+  font-size: 2.6rem;
+}
+
+h5 {
+  font-size: 2.4rem;
+}
+
+.fs-24 {
+  font-size: 2.4rem;
+}
+.fs-22 {
+  font-size: 2.2rem;
+}
+.fs-20 {
+  font-size: 2rem;
+}
+.fs-18 {
+  font-size: 1.8rem;
+}
+.fs-16 {
+  font-size: 1.6rem;
+}
+.fs-14 {
+  font-size: 1.4rem;
+}
+.fs-12 {
+  font-size: 1.2rem;
+}
+.fs-10 {
+  font-size: 1rem;
+}
+
+/* ============================================ */
+/*                 Font Weight                  */
+/* ============================================ */
+
+.fw-900 {
+  font-weight: 900;
+}
+.fw-800 {
+  font-weight: 800;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-300 {
+  font-weight: 300;
+}
+.fw-200 {
+  font-weight: 200;
+}
+.fw-100 {
+  font-weight: 100;
+}
+.fw-Bold {
+  font-weight: bold;
+}
+
+/* ============================================ */
+/*                Letter Spacing                */
+/* ============================================ */
+
+.ls-48 {
+  letter-spacing: 0.48rem;
+}
+.ls-44 {
+  letter-spacing: 0.44rem;
+}
+.ls-30 {
+  letter-spacing: 0.3rem;
+}
+.ls-28 {
+  letter-spacing: 0.28rem;
+}
+.ls-26 {
+  letter-spacing: 0.26rem;
+}
+.ls-24 {
+  letter-spacing: 0.24rem;
+}
+.ls-22 {
+  letter-spacing: 0.22rem;
+}
+.ls-20 {
+  letter-spacing: 0.2rem;
+}
+.ls-18 {
+  letter-spacing: 0.18rem;
+}
+.ls-16 {
+  letter-spacing: 0.16rem;
+}
+.ls-14 {
+  letter-spacing: 0.14rem;
+}
+.ls-12 {
+  letter-spacing: 0.12rem;
+}
+.ls-10 {
+  letter-spacing: 0.1rem;
+}
+.ls-08 {
+  letter-spacing: 0.08rem;
+}
+
+/* ============================================ */
+/*             Paragraph Displays               */
+/* ============================================ */
+
+.wspl {
+  white-space: pre-line;
+}
+.lh-35 {
+  line-height: 3.5rem;
+}
+/* ============================================ */
+/*                  Margins                     */
+/* ============================================ */
+
+.mch {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mt-130 {
+  margin-top: 13rem;
+}
+.mt-80 {
+  margin-top: 8rem;
+}
+.mt-70 {
+  margin-top: 7rem;
+}
+.mt-50 {
+  margin-top: 5rem;
+}
+.mt-45 {
+  margin-top: 4.5rem;
+}
+.mt-40 {
+  margin-top: 4rem;
+}
+.mt-35 {
+  margin-top: 3.5rem;
+}
+.mt-30 {
+  margin-top: 3rem;
+}
+.mt-25 {
+  margin-top: 2.5rem;
+}
+.mt-20 {
+  margin-top: 2rem;
+}
+.mt-15 {
+  margin-top: 1.5rem;
+}
+.mt-10 {
+  margin-top: 1rem;
+}
+.mt-05 {
+  margin-top: 0.5rem;
+}
+.mt-0375 {
+  margin-top: 0.375rem;
+}
+
+.mt-0125 {
+  margin-top: 0.125rem;
+}
+.mt-p125 {
+  margin-top: 0.125rem;
+}
+
+.mb70 {
+  margin-bottom: 7rem;
+}
+.mb50 {
+  margin-bottom: 5rem;
+}
+.mb45 {
+  margin-bottom: 4.5rem;
+}
+.mb40 {
+  margin-bottom: 4rem;
+}
+.mb35 {
+  margin-bottom: 3.5rem;
+}
+.mb30 {
+  margin-bottom: 3rem;
+}
+.mb25 {
+  margin-bottom: 2.5rem;
+}
+.mb20 {
+  margin-bottom: 2rem;
+}
+.mb15 {
+  margin-bottom: 1.5rem;
+}
+.mb10 {
+  margin-bottom: 1rem;
+}
+.mb05 {
+  margin-bottom: 0.5rem;
+}
+
+.ml40 {
+  margin-left: 4rem;
+}
+.ml35 {
+  margin-left: 3.5rem;
+}
+.ml30 {
+  margin-left: 3rem;
+}
+.ml20 {
+  margin-left: 2rem;
+}
+.ml15 {
+  margin-left: 1.5rem;
+}
+
+.mt-neg125 {
+  margin-top: -1.25rem;
+}
+.mt-neg10 {
+  margin-top: -1rem;
+}
+
+/* ============================================ */
+/*                  PADDINGS                    */
+/* ============================================ */
+
+.pdr-20 {
+  padding-right: 2rem;
+}
+
+.pd-LR1 {
+  padding: 0 1rem;
+}
+
+.pd-l10 {
+  padding-left: 1rem;
+}
+.pd-l05 {
+  padding-left: 0.5rem;
+}
+.pd-LR3 {
+  padding: 0 3rem;
+}
+
+.pd-TB1p5 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.pd-LR10 {
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+/* -------------------------------------------- */
+/*           TOP | BOTTOM / LEFT | RIGHT        */
+/* -------------------------------------------- */
+
+.pd-TB1p5LR10 {
+  padding: 1.5rem 10rem;
+}
+
+.pd-TB4LR1 {
+  padding: 4rem 1rem;
+}
+.pd-TB1LR2 {
+  padding: 1rem 2rem;
+}
+.pd-TB1LR3 {
+  padding: 1rem 3rem;
+}
+.pd-TB1p25LR2p5 {
+  padding: 1.25rem 2.5rem;
+}
+.pd-TB7LR1 {
+  padding: 7rem 1rem;
+}
+.pd-TB1LR5 {
+  padding: 1rem 5rem;
+}
+.pd-TB15LR4 {
+  padding: 1.5rem 4rem;
+}
+.pd-TB2LR3 {
+  padding: 2rem 3rem;
+}
+.pd-TB2LR5 {
+  padding: 2rem 5rem;
+}
+.pd-TB3LR5 {
+  padding: 3rem 5rem;
+}
+.pd-TB5LR3 {
+  padding: 5rem 3rem;
+}
+.pd-TB2LR8 {
+  padding: 2rem 8rem;
+}
+.pd-TB8LR2 {
+  padding: 8rem 2rem;
+}
+.pd-TB10LR2 {
+  padding: 10rem 2rem;
+}
+.pd-TB15LR1 {
+  padding: 15rem 1rem;
+}
+
+.card-status {
+  padding: 6rem 2rem;
+  /* border: 1px solid grey; */
+}
+
+@media (min-width: 280px) {
+  html {
+    font-size: 5px;
+  }
+}
+@media (min-width: 425px) {
+  html {
+    font-size: 6px;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 7px;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 9px;
+  }
+}
+@media (min-width: 1440px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media (min-width: 2880px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (min-width: 3840px) {
+  html {
+    font-size: 18px;
+  }
+}
+/* @media only screen and (max-width: 425px) {
+}
+@media only screen and (max-width: 480px) and (min-width: 426px) {
+}
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+}
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+} 
+@media only screen and (max-width: 1200px) and (min-width: 1025px) {
+} 
+@media only screen and (max-width: 1400px) and (min-width: 1026px) {
+} 
+*/
+/* 
+@media (min-width: 280px) {
+}
+@media (min-width: 360px) {
+}
+@media (min-width: 425px) {
+}
+@media (min-width: 480px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1440px) {
+} 
+@media (min-width: 2880px) {
+} 
+@media (min-width: 3840px) {
+} */

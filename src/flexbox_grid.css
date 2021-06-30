@@ -1,0 +1,220 @@
+/* ============================================ */
+/*                Flexbox Settings              */
+/* ============================================ */
+
+.fc--disp-flex {
+  display: flex;
+}
+.fc--fdir-row {
+  flex-direction: row;
+}
+.fc--fdir-col {
+  flex-direction: column;
+}
+.fc--fwrap-yes {
+  flex-wrap: wrap;
+}
+.fc--fwrap-no {
+  flex-wrap: nowrap;
+}
+.fc--aItem-fs {
+  align-items: flex-start;
+}
+.fc--aItem-fe {
+  align-items: flex-end;
+}
+.fc--aItem-ce {
+  align-items: center;
+}
+.fc--aCont-fs {
+  align-content: flex-start;
+}
+.fc--aCont-fe {
+  align-content: flex-end;
+}
+.fc--aCont-ce {
+  align-content: center;
+}
+.fc--aCont-sb {
+  align-content: space-between;
+}
+.fc--jCont-ce {
+  justify-content: center;
+}
+.fc--jCont-fs {
+  justify-content: flex-start;
+}
+.fc--jCont-fe {
+  justify-content: flex-end;
+}
+.fc--jCont-sb {
+  justify-content: space-between;
+}
+.fc--jCont-se {
+  justify-content: space-evenly;
+}
+.fi--aSelf-fs {
+  align-self: flex-start;
+}
+.fi--aSelf-fe {
+  align-self: flex-end;
+}
+.fi--aSelf-ce {
+  align-self: center;
+}
+
+/* --------------------------------------------------------- */
+/*     Flexbox Responsive Grid - Mobile first                */
+/* --------------------------------------------------------- */
+
+.fc-row {
+  display: flex;
+  flex-flow: row wrap;
+  border: red 1px solid;
+}
+.fi-cell {
+  flex: 1;
+  /* margin-bottom: 1rem; */
+  border: green 1px solid;
+}
+
+.fc-row-gutter {
+  /* for any row with columns that is not full, do a neg margin on the parent container shifting left over, this accomodates the first cell of any config, since they all have a padding left*/
+  margin-left: calc(-1 * var(--gutter));
+}
+
+.fc-row-gutter > .fi-cell {
+  /* if gutter is applied, put a padding on the left of the flex item - first item will make up the above neg margin */
+  padding-left: var(--gutter);
+}
+
+.fc-row-gutter.fc-row.nest > .fi-cell:first-of-type {
+  margin-right: 1rem;
+}
+
+/* .fc-col-1of6 > .grid-cell:first-of-type {
+  flex: 0 0 50%;
+}
+
+.grid--fit > .grid-cell {
+  flex: 1;
+} */
+
+/* --------------------------------------------------------- */
+/*         Base classes for all media - Mobile first         */
+/* --------------------------------------------------------- */
+
+/* Defaults for Base Grid */
+
+.fc-col > .fi-cell {
+  flex: 0 0 100%;
+}
+.fc-col-2 > .fi-cell {
+  flex: 0 0 100%;
+}
+.fc-col-3 > .fi-cell {
+  flex: 0 0 100%;
+}
+.fc-col-4 > .fi-cell {
+  flex: 0 0 100%;
+}
+.fc-col-6 > .fi-cell {
+  flex: 0 0 100%;
+}
+.fc-col-12 > .fi-cell {
+  flex: 0 0 100%;
+}
+
+/* Defaults for one fixed column and auto other */
+.fc-col-1of12 > .fi-cell:first-of-type,
+.fc-col-1of6 > .fi-cell:first-of-type,
+.fc-col-1of4 > .fi-cell:first-of-type,
+.fc-col-1of3 > .fi-cell:first-of-type,
+.fc-col-1of2 > .fi-cell:first-of-type {
+  flex: 0 0 100%;
+}
+
+/* if a row is nested, then  */
+
+@media (min-width: 480px) {
+  /* Adjust Base Grid */
+  .fc-col-6 > .fi-cell {
+    flex: 0 0 50%;
+  }
+  .fc-col-12 > .fi-cell {
+    flex: 0 0 25%;
+  }
+
+  .fc-col-1of12 > .fi-cell:first-of-type {
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Adjust Base Grid */
+  .fc-col-4 > .fi-cell {
+    flex: 0 0 50%;
+  }
+  .fc-col-6 > .fi-cell {
+    flex: 0 0 33.333%;
+  }
+  .fc-col-12 > .fi-cell {
+    flex: 0 0 16.6667%;
+  }
+
+  .fc-col-1of12 > .fi-cell:first-of-type {
+    flex: 0 0 33.3333%;
+  }
+  .fc-col-1of6 > .fi-cell:first-of-type {
+    flex: 0 0 50%;
+  }
+  /* .fc-col-1of4 > .fi-cell:first-of-type { flex: 0 0 100% }  
+  .fc-col-1of3 > .fi-cell:first-of-type { flex: 0 0 100% }  
+  .fc-col-1of2 > .fi-cell:first-of-type { flex: 0 0 100% } */
+}
+
+@media (min-width: 1200px) {
+  /* Adjust Base Grid */
+  .fc-col-3 > .fi-cell {
+    flex: 0 0 33.3333%;
+  }
+  .fc-col-4 > .fi-cell {
+    flex: 0 0 25%;
+  }
+  .fc-col-6 > .fi-cell {
+    flex: 0 0 16.6666%;
+  }
+  .fc-col-12 > .fi-cell {
+    flex: 0 0 8.3333%;
+  }
+
+  .fc-col-1of12 > .fi-cell:first-of-type {
+    flex: 0 0 33.3333%;
+  }
+  .fc-col-1of6 > .fi-cell:first-of-type {
+    flex: 0 0 33.3333%;
+  }
+  .fc-col-1of4 > .fi-cell:first-of-type {
+    flex: 0 0 25%;
+  }
+  .fc-col-1of3 > .fi-cell:first-of-type {
+    flex: 0 0 33.3333%;
+  }
+  .fc-col-1of2 > .fi-cell:first-of-type {
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* Adjust Base Grid */
+  .fc-col-2 > .fi-cell {
+    flex: 0 0 50%;
+  }
+
+  .fc-col-1of12 > .fi-cell:first-of-type {
+    flex: 0 0 8.3333%;
+  }
+  .fc-col-1of6 > .fi-cell:first-of-type {
+    flex: 0 0 16.6666%;
+  }
+}
