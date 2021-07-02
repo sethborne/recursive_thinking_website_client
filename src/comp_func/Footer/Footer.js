@@ -5,12 +5,12 @@ import IconFontAwesome from '../common/IconFontAwesome/IconFontAwesome';
 const Footer = () => {
   return (
     <footer className="fc-row fc-col-1of2">
-      <div className="fi-cell pd-TB1LR2">
+      <div className="fi-cell pd-TBp5LR2">
         <div className="copyright">
           <p className="fs-14 fw-500">&#169; Recursive Thinking, All Rights Reserved</p>
         </div>
       </div>
-      <div className="fi-cell pd-TB1LR2">
+      <div className="fi-cell pd-TBp5LR2">
         <div className="media-icons fs-24">
           <figure>
             <a

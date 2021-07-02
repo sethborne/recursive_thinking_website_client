@@ -1,17 +1,19 @@
 import { Router, Route } from 'react-router-dom';
-import { ROUTES } from '../standards/routes';
+import { ROUTES_REACT } from '../routes';
 import history from '../history';
 import './App.css';
 import HomeScreen from '../layouts/HomeScreen/HomeScreen';
+import Dashboard from '../comp_func/Dashboard/Dashboard';
 
 function App() {
-  const { root } = ROUTES;
+  const { root, dashboard } = ROUTES_REACT;
   return (
     <div>
       <Router history={history}>
-        <div>
-          <Route path={root} component={HomeScreen} />
-        </div>
+        <>
+          <Route path={root} exact component={HomeScreen} />
+          <Route path={dashboard} exact component={Dashboard} />
+        </>
       </Router>
     </div>
   );
