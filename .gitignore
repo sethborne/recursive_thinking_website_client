@@ -25,3 +25,7 @@ yarn-error.log*
 #secrets
 cognitoSecrets.json
 s3UploadSecrets.json
+
+#documentation
+/_Documentation
+*.md
