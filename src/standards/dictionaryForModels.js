@@ -1,3 +1,10 @@
+export const CogUser = {
+  id: 'id',
+  username: 'username',
+  name: 'name',
+  email: 'email',
+};
+
 export const User = {
   id: 'id',
   username: 'username',
