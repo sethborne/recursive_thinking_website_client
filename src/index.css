@@ -23,6 +23,12 @@
   --grey-b9: #b9b9b9;
   --grey-81: #818181;
   --grey-97: #979797;
+  --orange-ff9a23: #ff9a23;
+  --btn-brdr-thickness: 0.1rem;
+  --input-brdr-thickness: 0.1rem;
+  --brdr-profile-thickness: 0.1rem;
+  --warn: #ff9a23;
+  --error: #da0000;
 }
 
 /* Base Font Size for all rem values */

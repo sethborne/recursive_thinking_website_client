@@ -1,17 +1,16 @@
-import history from "../history";
-// import { Router, Route } from "react-router-dom";
-import { Router } from "react-router-dom";
+import { Router, Route } from 'react-router-dom';
+import { ROUTES } from '../standards/routes';
+import history from '../history';
 import './App.css';
-// import { ROUTES } from "../standards/routes";
+import HomeScreen from '../layouts/HomeScreen/HomeScreen';
 
 function App() {
-  // const { root } = ROUTES
+  const { root } = ROUTES;
   return (
     <div>
-      <Router history={ history}>
+      <Router history={history}>
         <div>
-          {/* <Route path={root}/> */}
-          This is an App
+          <Route path={root} component={HomeScreen} />
         </div>
       </Router>
     </div>

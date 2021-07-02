@@ -17,4 +17,8 @@ export const CEDV = {
 
 export const ROUTES_REACT = {
   root: '/',
+  dashboard: '/dashboard',
+
+  users_create: `${ROUTES_API.users}${CEDV.create}`,
+  users_create_id: `${ROUTES_API.users}${CEDV.create}/:id`,
 };

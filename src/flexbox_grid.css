@@ -2,6 +2,10 @@
 /*                Flexbox Settings              */
 /* ============================================ */
 
+:root {
+  --gutter: 3rem;
+}
+
 .fc--disp-flex {
   display: flex;
 }
@@ -70,13 +74,19 @@
 .fc-row {
   display: flex;
   flex-flow: row wrap;
+}
+.fi-cell {
+  flex: 1 1;
+
+  /* margin-bottom: 1rem; */
+}
+
+/* .fc-row {
   border: red 1px solid;
 }
 .fi-cell {
-  flex: 1;
-  /* margin-bottom: 1rem; */
   border: green 1px solid;
-}
+} */
 
 .fc-row-gutter {
   /* for any row with columns that is not full, do a neg margin on the parent container shifting left over, this accomodates the first cell of any config, since they all have a padding left*/
@@ -128,8 +138,9 @@
 /* Defaults for one fixed column and auto other */
 .fc-col-1of12 > .fi-cell:first-of-type,
 .fc-col-1of6 > .fi-cell:first-of-type,
-.fc-col-1of4 > .fi-cell:first-of-type,
-.fc-col-1of3 > .fi-cell:first-of-type,
+.fc-col-1of5 > .fi-cell:first-child,
+.fc-col-1of4 > .fi-cell:first-child,
+.fc-col-1of3 > .fi-cell:first-child,
 .fc-col-1of2 > .fi-cell:first-of-type {
   flex: 0 0 100%;
 }
@@ -194,10 +205,16 @@
   .fc-col-1of6 > .fi-cell:first-of-type {
     flex: 0 0 33.3333%;
   }
-  .fc-col-1of4 > .fi-cell:first-of-type {
+  /* .fc-col-1of5 > .fi-cell {
+    flex: 0 0 80%;
+  } */
+  .fc-col-1of5 > .fi-cell:first-child {
+    flex: 0 0 20%;
+  }
+  .fc-col-1of4 > .fi-cell:first-child {
     flex: 0 0 25%;
   }
-  .fc-col-1of3 > .fi-cell:first-of-type {
+  .fc-col-1of3 > .fi-cell:first-child {
     flex: 0 0 33.3333%;
   }
   .fc-col-1of2 > .fi-cell:first-of-type {
