@@ -5,15 +5,15 @@ import './HomeScreen.css';
 import { connect } from 'react-redux';
 import { homeScreenQuotesGetAll } from '../../actions';
 // Components
-import StatusRL from '../../comp_func/defaults/StatusRL/StatusRL';
-import Header from '../../comp_func/Header/Header';
-import Footer from '../../comp_func/Footer/Footer';
-import TileContainer from '../../comp_func/common/TileContainer/TileContainer';
-import Carousel from '../../comp_func/common/Carousel/Carousel';
-import Modal from '../../comp_func/common/Modal/Modal';
-import DefaultMessage from '../../comp_func/defaults/DefaultMessage/DefaultMessage';
+import StatusRL from '../../components/defaults/StatusRL/StatusRL';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import TileContainer from '../../components/common/TileContainer/TileContainer';
+import Carousel from '../../components/common/Carousel/Carousel';
+import Modal from '../../components/common/Modal/Modal';
+import DefaultMessage from '../../components/defaults/DefaultMessage/DefaultMessage';
 // Forms
-import { SignUpFormModal, SignInFormModal } from '../../comp_func/Forms/Form_Auth';
+import { SignUpFormModal, SignInFormModal } from '../../components/Forms/Form_Auth';
 // Copy
 import { COPY_HOMESCREEN } from '../../copy/copy';
 import { COPY_DEF_HOMESCREEN } from '../../copy/copy_default';
@@ -28,7 +28,7 @@ import {
 // CSS
 
 // Temp
-import { ControlPanel } from '../../comp_func/common/Temp/ControlPanel';
+import { ControlPanel } from '../../components/common/Temp/ControlPanel';
 
 class HomeScreen extends Component {
   state = {

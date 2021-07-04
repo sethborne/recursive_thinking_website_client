@@ -1,4 +1,4 @@
-import { retMapSignUp } from '../comp_func/Forms/_DictionaryValidationModels';
+import { retMapSignUp } from '../components/Forms/_DictionaryValidationModels';
 // const { } =
 
 export const copyFormSignUp = () => {
